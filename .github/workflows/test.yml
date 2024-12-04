@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -18,10 +17,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: openteamsinc/repos-proposal
+          ref: dev
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Run REPOS Proposal Publisher
+      # Run the action from the private repository
       - name: Run REPOS Proposal Publisher
         run: ./repos-proposal
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
