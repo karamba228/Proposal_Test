@@ -13,13 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Checkout private action
-        run: |
-          git clone https://$PAT@github.com/openteamsinc/repos-proposal.git .github/actions/repos-proposal
+      - name: Clone private action repository
         env:
-          PAT: ${{ secrets.PROPOSAL_TEST }}
+          ACTIONS_PAT: ${{ secrets.PROPOSAL_TEST}}
+        run: |
+          git clone https://$ACTIONS_PAT@github.com/openteamsinc/repos-proposal.git .github/actions/repos-proposal
 
       - name: Run REPOS Proposal Publisher
         uses: ./github/actions/repos-proposal
         with:
-          token: ${{ secrets.GPROPOSAL_TEST }}
+          token: ${{ secrets.GITHUB_TOKEN }}
