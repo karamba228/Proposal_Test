@@ -15,11 +15,11 @@ jobs:
 
       - name: Clone private repository
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/openteamsinc/repos-proposal.git
+          git clone https://x-access-token:${{ secrets.PROPOSAL_TEST }}@github.com/openteamsinc/repos-proposal.git
         env:
           GIT_TERMINAL_PROMPT: 0
 
       - name: Run REPOS Proposal Publisher
         run: |
           cd repos-proposal
-          ./repos-proposal --token ${{ secrets.GITHUB_TOKEN }}
+          ./repos-proposal --token ${{ secrets.PROPOSAL_TEST }}
