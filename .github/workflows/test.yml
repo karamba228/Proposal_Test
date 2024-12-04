@@ -16,6 +16,6 @@ jobs:
 
       # Run REPOS Proposal Publisher
       - name: Run REPOS Proposal Publisher
-        uses: openteamsinc/repos-proposal@v1
+        uses: openteamsinc/repos-proposal@dev
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
