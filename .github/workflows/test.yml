@@ -20,10 +20,10 @@ jobs:
         with:
           repository: openteamsinc/repos-proposal
           ref: dev
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PROPOSAL_TEST }}
 
       # Run REPOS Proposal Publisher
       - name: Run REPOS Proposal Publisher
         run: |
           cd repos-proposal
-          ./repos-proposal --token ${{ secrets.GITHUB_TOKEN }}
+          ./repos-proposal --token ${{ secrets.PROPOSAL_TEST }}
