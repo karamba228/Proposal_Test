@@ -14,8 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Checkout private action repository
+        uses: actions/checkout@v3
+        with:
+          repository: openteamsinc/repos-proposal
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       # Run REPOS Proposal Publisher
       - name: Run REPOS Proposal Publisher
-        uses: openteamsinc/repos-proposal@dev
+        run: ./repos-proposal
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
