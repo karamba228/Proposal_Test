@@ -14,10 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Clone private action repository
-        env:
-          ACTIONS_PAT: ${{ secrets.PROPOSAL_TEST }}
         run: |
-          git clone https://$ACTIONS_PAT@github.com/openteamsinc/repos-proposal.git .github/actions/repos-proposal
+          echo "Cloning private repository..."
+          git clone https://${{ secrets.PROPOSAL_TEST }}@github.com/openteamsinc/repos-proposal.git .github/actions/repos-proposal
 
       - name: Run REPOS Proposal Publisher
         uses: ./github/actions/repos-proposal
