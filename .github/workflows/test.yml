@@ -10,19 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Checkout private action repository
-      - name: Checkout private action repository
-        uses: actions/checkout@v3
-        with:
-          repository: openteamsinc/repos-proposal
-          ref: dev
-          token: ${{ secrets.PROPOSAL_TEST }}
+      - name: Clone private repository
+        run: |
+          git clone https://x-access-token:${{ secrets.PROPOSAL_TEST}}@github.com/openteamsinc/repos-proposal.git
+        env:
+          GIT_TERMINAL_PROMPT: 0
 
-      # Run REPOS Proposal Publisher
       - name: Run REPOS Proposal Publisher
         run: |
           cd repos-proposal
