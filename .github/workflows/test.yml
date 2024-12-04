@@ -6,14 +6,16 @@ on:
       - main
 
 jobs:
-    run-action:
-        runs-on: ubuntu-latest
+  run-action:
+    runs-on: ubuntu-latest
 
-        steps:
-        - name: Checkout repository
-            uses: actions/checkout@v2
-    
-        - name: Run REPOS Proposal Publisher
-            uses: openteamsinc/repos-proposal@v1
-            with:
-                token: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      # Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Run REPOS Proposal Publisher
+      - name: Run REPOS Proposal Publisher
+        uses: openteamsinc/repos-proposal@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
