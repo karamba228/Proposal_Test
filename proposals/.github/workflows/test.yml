@@ -1,0 +1,19 @@
+name: REPOS Proposal Publisher
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    run-action:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+            uses: actions/checkout@v2
+    
+        - name: Run REPOS Proposal Publisher
+            uses: openteamsinc/repos-proposal@v1
+            with:
+                token: ${{ secrets.GITHUB_TOKEN }}
