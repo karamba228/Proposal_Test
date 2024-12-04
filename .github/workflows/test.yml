@@ -10,15 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout main repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Set up authentication for private repository
+      - name: Set up authentication
+        run: |
+          git config --global url."https://x-access-token:${{ secrets.PROPOSAL_TEST }}@github.com/".insteadOf "https://github.com/"
+
+      # Clone the private repository
       - name: Clone private repository
         run: |
-          git clone https://x-access-token:${{ secrets.PROPOSAL_TEST }}@github.com/openteamsinc/repos-proposal.git
-        env:
-          GIT_TERMINAL_PROMPT: 0
+          git clone https://github.com/openteamsinc/repos-proposal.git
 
+      # Run REPOS Proposal Publisher
       - name: Run REPOS Proposal Publisher
         run: |
           cd repos-proposal
