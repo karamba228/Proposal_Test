@@ -6,19 +6,14 @@ on:
       - main
 
 jobs:
-  run-action:
-    runs-on: ubuntu-latest
+    run-action:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Clone private action repository
-        run: |
-          echo "Cloning private repository..."
-          git clone https://${{ secrets.PROPOSAL_TEST }}@github.com/openteamsinc/repos-proposal.git .github/actions/repos-proposal
-
-      - name: Run REPOS Proposal Publisher
-        uses: ./github/actions/repos-proposal
-        with:
-          token: ${{ secrets.PROPOSAL_TEST }}
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+    
+        - name: Run REPOS Proposal Publisher
+          uses: openteamsinc/repos-proposal-publisher@dev
+          with:
+              token: ${{ secrets.PROPOSAL_TEST }}
