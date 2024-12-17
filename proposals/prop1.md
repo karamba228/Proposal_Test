@@ -1,5 +1,5 @@
 ---
-Proposal Title: "Test Proposal"
+Proposal Title: "Inventory Management System (IMS)"
 Tagline: "Test Tagline for Proposal"
 Requested Funding Amount: "10000"
 Skills: "Python, Machine Learning, Data Analysis"
