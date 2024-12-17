@@ -6,11 +6,11 @@ Requested Funding Amount: "10000"
 Skills: "Python, Machine Learning, Data Analysis"
 Author: "@karamba228"
 Is your organization willing to sponsor this project?: "No"
-Is this an existing OSS project?: "No"
+Is this an existing OSS project?: "Yes"
 ---
 
 ## Project Description
-This project involves developing an Inventory Management System (IMS) designed for small businesses to streamline stock tracking and management. The system will allow users to add, update, and delete products, monitor stock levels in real-time, and generate low-stock alerts. Additionally, it will include reporting features to analyze sales trends and inventory turnover. The project will utilize a relational database (e.g., MySQL or PostgreSQL) for storing product data, a front-end interface for user interaction, and a back-end API for processing operations. This test project aims to demonstrate system scalability, efficient data handling, and user-friendly UI/UX principles.
+This (Updated) project involves developing an Inventory Management System (IMS) designed for small businesses to streamline stock tracking and management. The system will allow users to add, update, and delete products, monitor stock levels in real-time, and generate low-stock alerts. Additionally, it will include reporting features to analyze sales trends and inventory turnover. The project will utilize a relational database (e.g., MySQL or PostgreSQL) for storing product data, a front-end interface for user interaction, and a back-end API for processing operations. This test project aims to demonstrate system scalability, efficient data handling, and user-friendly UI/UX principles.
 
 ## Project Details & Specifications
 1. Project Title: Inventory Management System for Small Businesses
