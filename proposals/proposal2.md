@@ -1,7 +1,7 @@
 ---
 Proposal Title: "Updated Proposal"
 Tagline: "Demo Tagline"
-Requested Funding Amount: "10000"
+Requested Funding Amount: "1000"
 Skills: "Python, Machine Learning, Data Analysis"
 Author: "@karamba228"
 Is your organization willing to sponsor this project?: "No"
